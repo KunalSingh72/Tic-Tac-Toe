@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+}
+:root{
+    color: #fff;
+    font-family: "Outfit", sans-serif;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Vibrant gradient */
+    flex-direction: column;
+}
+
+/* flexbox */
+body,
+section, 
+#display,
+#score,
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#score{
+    flex-direction: row;
+}
+h1{
+    font-size: 4rem;
+}
+p{
+    font-size: 1.5rem;
+    margin: 20px;
+}
+section{
+    width: 100%;
+}
+#display {
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px 0;
+    padding: 0.5rem 2rem;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 1.5rem 2.5rem;
+}
+
+#game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 160px);
+    grid-template-rows: repeat(3, 160px);
+    grid-gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.box:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+.box:active{
+    background: rgba(255, 255, 255, 0.35);
+}
+
+#reset-btn {
+    margin: 40px 0;
+    font-size:2rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    cursor: pointer;
+    transition: background 0.3s ease;
+    padding:1.5rem;
+}
+#reset-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+#reset-btn:active {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+@media (max-width: 700px){
+    h1{
+        font-size: 3rem;
+    }
+    #display{
+        font-size: larger;
+        margin: 10px;
+    }
+    p{
+        font-size: 1em;
+    }
+    #game-container{
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+
+    }   
+    .box{
+        font-size: 30px;
+        border-radius: 10px;
+    }
+    #reset-btn{
+        font-size: large;
+        width:auto;
+        padding:1rem;
+    }
+}
