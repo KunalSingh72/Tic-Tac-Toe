@@ -65,9 +65,10 @@ function checkBoard(){
         const [a, b, c] = combo;
         if(board[a] !== '' && board[a] === board[b] && board[b] === board[c]){
             winner = board[a];
-            console.log(winner);
             
-            highlightBox(combo);
+            box[a].classList.add('combo-boxes');
+            box[b].classList.add('combo-boxes');
+            box[c].classList.add('combo-boxes');
 
             if(currentplayer!==player1){
                 display.innerHTML = 'Player 1 Wins🎉🎉';
@@ -99,9 +100,3 @@ resetBtn.addEventListener('click', () => {
 
 })
 
-function highlightBox(combo){
-
-    for(c of combo){
-        box[c].classList.add('combo-boxes');
-    }        
-}
