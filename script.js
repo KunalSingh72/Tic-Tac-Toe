@@ -67,6 +67,8 @@ function checkBoard(){
             winner = board[a];
             console.log(winner);
             
+            highlightBox(combo);
+
             if(currentplayer!==player1){
                 display.innerHTML = 'Player 1 Wins🎉🎉';
                 player1_Score++;
@@ -91,6 +93,15 @@ resetBtn.addEventListener('click', () => {
         element.innerHTML = '';
         board[index] = '';
         display.innerHTML = 'Cleared!!👍';
+        box[index].classList.toggle('combo-boxes', false);
     })
     gameState = true;
+
 })
+
+function highlightBox(combo){
+
+    for(c of combo){
+        box[c].classList.add('combo-boxes');
+    }        
+}

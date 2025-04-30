@@ -84,6 +84,16 @@ section{
 .box:active{
     background: rgba(255, 255, 255, 0.35);
 }
+.combo-boxes{
+    background: rgba(37, 233, 20, 0.548);
+    border: 1px solid rgba(38, 233, 20, 0.897);
+    box-shadow: 0 0 15px rgba(24, 251, 4, 0.989);
+}
+.combo-boxes:hover{
+    background: rgba(37, 233, 20, 0.548);
+    border: 1px solid rgba(38, 233, 20, 0.897);
+    box-shadow: 0 0 15px rgba(24, 251, 4, 0.989);
+}
 
 #reset-btn {
     margin: 40px 0;
